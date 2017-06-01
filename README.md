@@ -1,4 +1,4 @@
-# FOR React Slick
+# For React Slick
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
