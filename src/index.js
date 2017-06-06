@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './search-component';
 import VideoList from './video-list';
+import Carousal from './slider-component'
 import VideoDetails from './video-details';
 import _ from 'lodash';
 const API_KEY = 'AIzaSyCdkfBgzn97lqMaA3M0dwfUanE9KDbK5Gs';
-
-
 
 const App = React.createClass({
 	
@@ -33,7 +32,9 @@ const App = React.createClass({
 			<div>
 				<SearchBar onSearch={videoSearch} />
 				<VideoDetails  video={this.state.selectedVideo}/>
-				<VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
+				<Carousal videos={this.state.videos}>
+					{/*<VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />*/}
+				</Carousal>
 			</div>
 		);
 	}
